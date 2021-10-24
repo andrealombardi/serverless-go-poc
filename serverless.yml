@@ -36,19 +36,21 @@ provider:
 #  environment:
 #    variable1: value1
 
-package:
-  patterns:
-    - ./bin/**
-
 functions:
   hello:
-    handler: hello
+    handler: bin/hello
+    package:
+      include:
+        - ./bin/hello
     events:
       - httpApi:
           path: /hello
           method: get
   world:
-    handler: world
+    handler: bin/world
+    package:
+      include:
+        - ./bin/world
     events:
       - httpApi:
           path: /world
