@@ -20,6 +20,10 @@ jobs:
       - name: Build
         run: make build -v
 
+      - name: Serverless deploy
+        uses: serverless/github-action@master
+        with:
+          args: deploy
         env:
           # SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
           # or if using AWS credentials directly
