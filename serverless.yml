@@ -42,13 +42,13 @@ package:
 
 functions:
   hello:
-    handler: hello/main.go
+    handler: hello
     events:
       - httpApi:
           path: /hello
           method: get
   world:
-    handler: world/main.go
+    handler: world
     events:
       - httpApi:
           path: /world
