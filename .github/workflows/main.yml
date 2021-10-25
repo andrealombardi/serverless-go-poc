@@ -20,11 +20,20 @@ jobs:
       - name: List directory content
         run: ls
 
+      - name: List hello directory content
+        run: ls hello
+
       - name: Cat makefile
         run: cat Makefile
 
       - name: Build
         run: make build -v
+
+      - name: List content after build
+        run: ls
+
+      - name: List bin content after build
+        run: ls bin/
 
       - name: Serverless deploy
         uses: serverless/github-action@master

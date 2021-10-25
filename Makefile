@@ -1,4 +1,4 @@
-.PHONY: build clean deploy
+.PHONY: clean build deploy
 
 build:
 	echo this is the build file
